@@ -1,0 +1,48 @@
+/* ========================== */
+/*        *MY STYLES*         */
+/* ========================== */
+$font-stack: "Roboto", sans-serif;
+
+$primary: #adaee7;
+$primary-light-10: lighten($primary, 10%);
+$primary-light-15: lighten($primary, 15%);
+$primary-light-20: lighten($primary, 20%);
+$primary-dark-10: darken($primary, 10%);
+$primary-dark-15: darken($primary, 15%);
+$primary-dark-20: darken($primary, 20%);
+
+$secondary: #b3b5c4;
+$secondary-light-10: lighten($secondary, 10%);
+$secondary-light-15: lighten($secondary, 15%);
+$secondary-light-20: lighten($secondary, 20%);
+$secondary-dark-10: darken($secondary, 10%);
+$secondary-dark-15: darken($secondary, 15%);
+$secondary-dark-20: darken($secondary, 20%);
+
+$text: #202020;
+
+body {
+	font-family: $font-stack;
+	font-weight: 300;
+	width: 100%;
+	height: 100vh;
+	background-color: $secondary-light-20;
+}
+
+.flex {
+	display: flex;
+
+	&--ctr {
+		justify-content: center;
+		align-items: center;
+	}
+	&--row {
+		flex-direction: row;
+	}
+	&--col {
+		flex-direction: column;
+	}
+	&--half {
+		width: 48%;
+	}
+}

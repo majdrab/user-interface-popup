@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Uporabniški vmesnik</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<script
+			src="https://kit.fontawesome.com/fbeb9023f2.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body class="flex flex--ctr">
+		<main class="main flex flex--ctr">
+			<form class="container flex flex--col" action="">
+				<div class="flex form form--left">
+					<textarea
+						class="form__title"
+						name="title"
+						id=""
+						cols="30"
+						rows="1"
+						placeholder="Task title:"
+					></textarea>
+				</div>
+				<div class="flex form form--sb">
+               <div class="flex flex--half flex--col">
+                  <label for="assign">Assigned to:</label>
+                  <input class="form__assign" type="text" id="assign" name="assign" placeholder="Write name(s) here:" />
+               </div>
+               <div class="flex flex--half flex--col">
+                  <label for="status">Status:</label>
+                  <select class="form__status" id="status" name="status">
+                     <option value="#">Open</option>
+                     <option value="#">In Progress</option>
+                     <option value="#">Closed</option>
+                  </select>
+               </div>
+				</div>
+            <div class="flex form form--sb">
+               <div class="flex flex-half flex--col">
+                  <label for="date">Due date:</label>
+                  <input class="form__date" type="date" id="date" name="date" min="2022-01-01" max="2022-12-31">
+               </div>
+               <div class="flex flex--half flex--col">
+                  <label for="priority">Priority:</label>
+                  <select class="form__priority" id="priority" name="priority">
+                     <option value="#">Low</option>
+                     <option value="#">Medium</option>
+                     <option value="#">High</option>
+                  </select>
+               </div>
+            </div>
+				<div class="flex flex--col form form--left">
+					<h2>Description:</h2>
+               <textarea
+						class="form__desc"
+						name="desc"
+						id="desc"
+						cols="30"
+						rows="10"
+						placeholder="Write your description here"
+					></textarea>
+				</div>
+				<div class="flex flex--col form form--left">
+               <h2>Attachments:</h3>
+					<div class="form__uploaded flex">
+						<label for="file-uploaded" class="form__upload"
+							><i class="fa-solid fa-cloud-arrow-up"></i
+							>uploaded.pdf</label
+						><i class="fa-solid fa-trash"></i>
+                  <input
+						id="file-uploaded"
+						name="file-upload"
+						type="file"
+						multiple
+					/>
+					</div>
+				
+					<label for="file-upload" class="form__upload"
+						><i class="fa-solid fa-plus"></i></i>Upload a new
+						attachment</label
+					>
+					<input
+						id="file-upload"
+						name="file-upload"
+						type="file"
+						multiple
+					/>
+				</div>
+				<div class="flex form form--right">
+					<button class="form__save">Save task</button>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>

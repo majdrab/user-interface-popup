@@ -1,0 +1,213 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove formatting from links*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========================== */
+/*        *MY STYLES*         */
+/* ========================== */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  width: 100%;
+  height: 100vh;
+  background-color: #ecedf1;
+}
+
+.flex {
+  display: flex;
+}
+.flex--ctr {
+  justify-content: center;
+  align-items: center;
+}
+.flex--row {
+  flex-direction: row;
+}
+.flex--col {
+  flex-direction: column;
+}
+.flex--half {
+  width: 48%;
+}
+
+.main {
+  height: 700px;
+  width: 500px;
+  border-radius: 20px;
+  background-color: #d4d5f3;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.068);
+}
+
+.container {
+  width: 80%;
+  height: 90%;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid #8687db;
+  background-color: #e8e8f8;
+}
+
+.form {
+  width: 100%;
+  color: #202020;
+}
+.form h2,
+.form label[for=assign],
+.form label[for=date],
+.form label[for=priority],
+.form label[for=status] {
+  padding: 5px 0;
+}
+.form--right {
+  justify-content: end;
+}
+.form--left {
+  justify-content: start;
+}
+.form--sb {
+  justify-content: space-between;
+}
+.form ::placeholder {
+  color: #202020;
+  opacity: 0.9;
+}
+.form :-ms-input-placeholder {
+  color: #202020;
+}
+.form ::-ms-input-placeholder {
+  color: #202020;
+}
+.form__title {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100px;
+  border-radius: 10px;
+  color: #202020;
+  background-color: #fcfcfe;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.form__assign, .form__status, .form__date, .form__priority {
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #202020;
+  background-color: #fcfcfe;
+  height: 33px;
+}
+.form__date {
+  width: 192px;
+}
+.form__desc {
+  border-radius: 10px;
+  padding: 10px;
+  color: #202020;
+  background-color: #fcfcfe;
+}
+.form input[type=file] {
+  display: none;
+}
+.form__upload {
+  width: 60%;
+  background-color: #fcfcfe;
+  border-radius: 10px;
+  color: #202020;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+.form > .form__upload {
+  background-color: #d4d5f3;
+  border: 2px dashed #202020;
+}
+.form .fa-cloud-arrow-up,
+.form .fa-plus {
+  width: 25px;
+}
+.form__uploaded {
+  align-items: center;
+}
+.form__uploaded .fa-trash {
+  margin-left: 15px;
+  cursor: pointer;
+}
+.form__save {
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #202020;
+  background-color: #fcfcfe;
+  transition: color 0.3s, background-color 0.3s;
+}
+.form__save:hover {
+  background-color: #8687db;
+  color: #fcfcfe;
+}
+
+/*# sourceMappingURL=styles.css.map */

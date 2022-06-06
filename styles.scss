@@ -1,0 +1,137 @@
+@use "reset";
+@use "base";
+
+.main {
+	height: 700px;
+	width: 500px;
+	border-radius: 20px;
+	background-color: base.$primary-light-10;
+	box-shadow: 0 50px 50px rgba(0, 0, 0, 0.068);
+}
+.container {
+	width: 80%;
+	height: 90%;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 1rem;
+}
+input:focus,
+textarea:focus,
+select:focus {
+	outline: 1px solid base.$primary-dark-10;
+	background-color: base.$primary-light-15;
+}
+.form {
+	width: 100%;
+	color: base.$text;
+
+	h2,
+	label[for="assign"],
+	label[for="date"],
+	label[for="priority"],
+	label[for="status"] {
+		padding: 5px 0;
+	}
+
+	&--right {
+		justify-content: end;
+	}
+	&--left {
+		justify-content: start;
+	}
+	&--sb {
+		justify-content: space-between;
+	}
+	::placeholder {
+		color: base.$text;
+		opacity: 0.9;
+	}
+	:-ms-input-placeholder {
+		color: base.$text;
+	}
+
+	::-ms-input-placeholder {
+		color: base.$text;
+	}
+
+	// TITLE
+	&__title {
+		min-width: 100%;
+		max-width: 100%;
+		max-height: 100px;
+		border-radius: 10px;
+		color: base.$text;
+		background-color: base.$primary-light-20;
+		padding: 10px;
+		font-weight: 400;
+		font-size: 1.2rem;
+		margin-bottom: 20px;
+	}
+	// ASSIGN, STATUS, DATE AND PRIORITY
+	&__assign,
+	&__status,
+	&__date,
+	&__priority {
+		padding: 6px 12px;
+		border-radius: 10px;
+		color: base.$text;
+		background-color: base.$primary-light-20;
+		height: 33px;
+	}
+
+	&__date {
+		width: 192px;
+	}
+
+	// DESCRIPTION
+	&__desc {
+		border-radius: 10px;
+		padding: 10px;
+		color: base.$text;
+		background-color: base.$primary-light-20;
+	}
+
+	// ATTACHMENTS
+	input[type="file"] {
+		display: none;
+	}
+	&__upload {
+		width: 60%;
+		background-color: base.$primary-light-20;
+		border-radius: 10px;
+		color: base.$text;
+		display: inline-block;
+		padding: 6px 12px;
+		cursor: pointer;
+		margin: 5px 0;
+	}
+	& > &__upload {
+		background-color: base.$primary-light-10;
+		border: 2px dashed base.$text;
+	}
+	.fa-cloud-arrow-up,
+	.fa-plus {
+		width: 25px;
+	}
+	&__uploaded {
+		align-items: center;
+		.fa-trash {
+			margin-left: 15px;
+			cursor: pointer;
+		}
+	}
+
+	// SAVE
+	&__save {
+		padding: 6px 12px;
+		border-radius: 10px;
+		color: base.$text;
+		background-color: base.$primary-light-20;
+		transition: color 0.3s, background-color 0.3s;
+
+		&:hover {
+			background-color: base.$primary-dark-10;
+			color: base.$primary-light-20;
+		}
+	}
+}
